@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -15,7 +15,12 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        google()
+        mavenCentral()
+        maven { // repo for TFLite snapshot
+            name 'ossrh-snapshot'
+            url 'http://oss.sonatype.org/content/repositories/snapshots'
+        }
     }
 }
 
